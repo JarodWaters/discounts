@@ -44,8 +44,8 @@ export function run(input) {
   eligibleTiers.forEach(tier => {
     const targets = input.cart.lines
       .filter(line => {
-        const tags = line.merchandise.product?.tags || [];
-        return tags.includes(tier.key);
+        const metafield = line.merchandise.product?.metafield;
+        return metafield && metafield.value === tier.key;
       })
       .map(line => ({
         productVariant: {

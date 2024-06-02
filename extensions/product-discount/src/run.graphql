@@ -15,7 +15,9 @@ query RunInput {
           title
           sku
           product {
-            tags
+            metafield(namespace: "custom", key: "tier") {
+              value
+            }
           }
         }
       }
