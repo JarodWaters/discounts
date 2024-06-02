@@ -3,7 +3,7 @@
 client_id = "f59301dac3dbc000fd3ef38f1d160657"
 name = "Discounts"
 handle = "discounts-147"
-application_url = "https://om-image-born-compute.trycloudflare.com"
+application_url = "https://metro-protocols-creature-regular.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_products,write_discounts,write_products"
 
 [auth]
 redirect_urls = [
-  "https://om-image-born-compute.trycloudflare.com/auth/callback",
-  "https://om-image-born-compute.trycloudflare.com/auth/shopify/callback",
-  "https://om-image-born-compute.trycloudflare.com/api/auth/callback"
+  "https://metro-protocols-creature-regular.trycloudflare.com/auth/callback",
+  "https://metro-protocols-creature-regular.trycloudflare.com/auth/shopify/callback",
+  "https://metro-protocols-creature-regular.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
