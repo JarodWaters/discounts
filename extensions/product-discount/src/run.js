@@ -39,24 +39,31 @@ export function run(input) {
     return EMPTY_DISCOUNT;
   }
 
-  const discounts = eligibleTiers.map(tier => {
+  const discounts = [];
+
+  eligibleTiers.forEach(tier => {
     const targets = input.cart.lines
-      .filter(line => line.merchandise.__typename === "ProductVariant")
+      .filter(line => {
+        const tags = line.merchandise.product?.tags || [];
+        return tags.includes(tier.key);
+      })
       .map(line => ({
         productVariant: {
           id: line.merchandise.id,
         },
       }));
 
-    return {
-      message: tier.message,
-      targets,
-      value: {
-        percentage: {
-          value: "100.0",
+    if (targets.length > 0) {
+      discounts.push({
+        message: tier.message,
+        targets,
+        value: {
+          percentage: {
+            value: "100.0",
+          },
         },
-      },
-    };
+      });
+    }
   });
 
   console.log("Discounts:", discounts);

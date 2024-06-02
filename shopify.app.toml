@@ -3,7 +3,7 @@
 client_id = "f59301dac3dbc000fd3ef38f1d160657"
 name = "Discounts"
 handle = "discounts-147"
-application_url = "https://jpg-viral-purchased-treatment.trycloudflare.com"
+application_url = "https://editors-cottages-strengthening-lying.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_products,write_discounts,write_products"
 
 [auth]
 redirect_urls = [
-  "https://jpg-viral-purchased-treatment.trycloudflare.com/auth/callback",
-  "https://jpg-viral-purchased-treatment.trycloudflare.com/auth/shopify/callback",
-  "https://jpg-viral-purchased-treatment.trycloudflare.com/api/auth/callback"
+  "https://editors-cottages-strengthening-lying.trycloudflare.com/auth/callback",
+  "https://editors-cottages-strengthening-lying.trycloudflare.com/auth/shopify/callback",
+  "https://editors-cottages-strengthening-lying.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
