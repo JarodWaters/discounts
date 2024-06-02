@@ -21,7 +21,7 @@ const EMPTY_DISCOUNT = {
 export function run(input) {
   console.log("Input Cart Lines:", JSON.stringify(input.cart.lines, null, 2));
 
-  const cartTotal = parseFloat(input.cart.cost.subtotalAmount.amount);
+  const cartTotal = parseFloat(input.cart.cost.totalAmount.amount);
   console.log("Cart Total:", cartTotal);
 
   const tiers = [
