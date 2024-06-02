@@ -1,0 +1,21 @@
+query RunInput {
+  cart {
+    cost {
+      subtotalAmount {
+        amount
+        currencyCode
+      }
+    }
+    lines {
+      quantity
+      merchandise {
+        __typename
+        ...on ProductVariant {
+          id
+          title
+          sku
+        }
+      }
+    }
+  }
+}
